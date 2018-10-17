@@ -1,0 +1,122 @@
+﻿@model SELab5.Models.PersonDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PersonDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+            <dt>
+                @Html.DisplayNameFor(model => model.person.FirstName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.person.FirstName)
+            </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.person.MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.person.MiddleName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.person.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.person.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.person.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.person.DateOfBirth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.person.AddedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.person.AddedOn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.person.HomeAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.person.HomeAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.person.HomeCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.person.HomeCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.person.FaceBookAccountId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.person.FaceBookAccountId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.person.LinkedInId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.person.LinkedInId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.person.TwitterId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.person.TwitterId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.person.EmailId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.person.EmailId)
+        </dd>
+    </dl>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            Contact
+        </th>
+        <th>
+            Contact Type
+        </th>
+      
+      
+    </tr>
+
+    @foreach (var item in Model.listContact)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            
+        </tr>
+    }
+    </table>
+    <p>
+
+        @Html.ActionLink("Back to List", "Index")
+    </p>
